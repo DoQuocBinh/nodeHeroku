@@ -1,5 +1,9 @@
 var express=require('express');
 
+var http = require('http');
+var port = process.env.PORT || 3000;
+
+
 var app=express();
 
 app.get('/',function(req,res)
@@ -11,4 +15,4 @@ app.get('/demo',function(req,res)
 {
     res.send('Hello Demo!');
 });
-var server=app.listen(3000,function() {});
+var server=app.listen(port,function() {});
